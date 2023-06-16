@@ -1,15 +1,15 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
 
-function Home() {
+function Projects() {
   return (
     <div>
       <Navbar />
       <h1>
-        HOMEPAGE
+        PROJECTS
       </h1>
     </div>
   );
 }
 
-export default Home;
+export default Projects;
