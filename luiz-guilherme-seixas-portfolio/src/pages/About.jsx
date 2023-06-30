@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function About() {
   return (
@@ -8,6 +9,7 @@ function About() {
       <h1>
         ABOUT
       </h1>
+      <Footer />
     </div>
   );
 }

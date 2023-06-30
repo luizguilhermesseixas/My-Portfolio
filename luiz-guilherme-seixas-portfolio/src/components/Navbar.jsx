@@ -51,7 +51,7 @@ function Navbar() {
         text-[#5b88a5]  hover:border-[#243a69] hover:text-[#243a69]"
         >
           <TfiBook className="w-6 h-6" />
-          <span className="hidden md:inline">About</span>
+          <span className="hidden md:inline">Sobre</span>
         </button>
 
         <button
@@ -61,7 +61,7 @@ function Navbar() {
         text-[#5b88a5]  hover:border-[#243a69] hover:text-[#243a69]"
         >
           <TfiDesktop className="w-6 h-6" />
-          <span className="hidden md:inline">Projects</span>
+          <span className="hidden md:inline">Projetos</span>
         </button>
       </div>
 
@@ -82,7 +82,7 @@ function Navbar() {
               className="flex items-center space-x-2 text-[#243a69]"
             >
               <TfiBook className="w-6 h-6" />
-              <span className="ml-2">About</span>
+              <span className="ml-2">Sobre</span>
             </button>
             <div className="h-0.5 bg-[#243a69]" />
 
@@ -91,7 +91,7 @@ function Navbar() {
               className="flex items-center space-x-2 text-[#243a69]"
             >
               <TfiDesktop className="w-6 h-6" />
-              <span className="ml-2">Projects</span>
+              <span className="ml-2">Projetos</span>
             </button>
             <div className="h-0.5 bg-[#243a69]" />
           </div>

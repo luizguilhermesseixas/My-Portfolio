@@ -1,5 +1,6 @@
 import React from 'react';
 import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 
 function Projects() {
   return (
@@ -8,6 +9,7 @@ function Projects() {
       <h1>
         PROJECTS
       </h1>
+      <Footer />
     </div>
   );
 }
