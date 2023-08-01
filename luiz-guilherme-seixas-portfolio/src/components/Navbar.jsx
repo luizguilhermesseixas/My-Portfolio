@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <header
-      className="flex flex-col md:flex-row md:justify-between
+      className="flex flex-col sticky top-0 z-50 md:flex-row md:justify-between
       md:items-center py-4 px-8 bg-[#f4f4f2]"
     >
       <div className="flex items-center justify-between">

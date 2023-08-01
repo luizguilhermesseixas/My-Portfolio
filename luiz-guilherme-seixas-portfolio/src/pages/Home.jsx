@@ -8,7 +8,9 @@ function Home() {
   const history = useHistory();
   return (
     <div className="flex flex-col min-h-screen">
+
       <Navbar />
+
       <div
         className="flex-grow flex flex-col md:flex-row
         md:items-center justify-center p-4"
