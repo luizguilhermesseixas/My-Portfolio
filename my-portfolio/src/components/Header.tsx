@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import React, { useState } from "react";
 import Link from "next/link";
@@ -12,12 +12,12 @@ export default function Header() {
     setIsMenuOpen((isMenuOpen) => !isMenuOpen);
   };
 
-	const navLinks = [
-		{ href: "/", label: "Home" },
-		{ href: "/about", label: "About" },
-		{ href: "/projects", label: "Projects" },
-		{ href: "/contact", label: "Contact" },
-	];
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "About" },
+    { href: "/projects", label: "Projects" },
+    { href: "/contact", label: "Contact" },
+  ];
 
   return (
     <header className="bg-primary-900 shadow-md relative z-50">
