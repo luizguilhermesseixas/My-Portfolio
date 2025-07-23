@@ -46,7 +46,7 @@ export default function AboutPage() {
           <h1 className="text-4xl md:text-6xl font-sans text-primary-500 text-center md:text-left">
             {displayed}
           </h1>
-          <CrocodileIcon className="w-16 h-16 md:w-20 md:h-20 text-primary-500 ml-4 transition-transform duration-300 hover:-translate-y-2 hover:rotate-6" />
+          <CrocodileIcon className="w-16 h-16 md:w-20 md:h-20 ml-4 transition-transform duration-300 hover:-translate-y-2 hover:rotate-6" />
         </div>
         <div className="w-full max-w-4xl bg-primary-50 rounded-xl shadow-md px-4 sm:px-8 lg:px-16 py-8 mb-8 transition-colors">
           <p className="text-lg md:text-xl font-sans text-primary-600 leading-relaxed text-left px-0">

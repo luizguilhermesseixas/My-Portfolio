@@ -23,7 +23,7 @@ export default function HomePage() {
         <h1 className="text-4xl md:text-6xl font-sans text-primary-500 text-center md:text-left ">
           {displayed}
         </h1>
-        <DinosaurIcon className="w-16 h-16 md:w-20 md:h-20 text-primary-500 transition-transform duration-300 hover:-translate-y-2 hover:rotate-6 md:mb-[-12px]" />
+        <DinosaurIcon className="w-16 h-16 md:w-20 md:h-20 transition-transform duration-300 hover:-translate-y-2 hover:rotate-6 md:mb-[-12px]" />
       </div>
       <h2 className="text-2xl md:text-3xl font-sans text-primary-600 mb-6 text-center md:text-left mt-8">
         Software Engineer passionate about building robust and efficient
