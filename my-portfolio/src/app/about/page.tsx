@@ -54,7 +54,7 @@ export default function AboutPage() {
           development and optimization of billing, invoicing, and subscription
           management systems, always prioritizing code quality, maintainability,
           and system reliability. I thrive in agile, cross-functional teams and
-          am committed to best practices in code review, testing, and CI/CD.
+          committed to best practices in code review, testing, and CI/CD.
           <br />
           <br />
           Currently, I am deepening my expertise in cloud computing—especially
