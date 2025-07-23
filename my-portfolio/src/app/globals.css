@@ -14,8 +14,7 @@
   --color-primary-800: oklch(0.3281 0.0381 236.32);
   --color-primary-900: oklch(0.2303 0.027 235.97);
   --color-primary-950: oklch(0.1761 0.0209 239.68);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --font-sans: var(--font-poppins);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -28,5 +27,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
 }
