@@ -2,8 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import MenuIcon from "@/icons/menu.svg";
-import CloseMenuIcon from "@/icons/close.svg";
+import MenuIcon from "../icons/menu.svg"; // Adjust the import path as necessary
+import CloseMenuIcon from "../icons/close.svg"; // Adjust the import path as necessary
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

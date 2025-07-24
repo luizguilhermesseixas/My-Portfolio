@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import DinosaurIcon from "@/icons/dinosaur.svg"; // Adjust the import path as necessary
+import DinosaurIcon from "../icons/dinosaur.svg"; // Adjust the import path as necessary
 
 export default function HomePage() {
   const fullText = "Hi, I'm Luiz Seixas!";

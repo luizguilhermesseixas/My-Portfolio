@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import CrabIcon from "@/icons/crab.svg";
+import CrabIcon from "../../icons/crab.svg"; // Adjust the import path as necessary
 import Image from "next/image";
 
 const projects = [

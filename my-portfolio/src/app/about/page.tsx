@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import CrocodileIcon from "@/icons/crocodile.svg";
+import CrocodileIcon from "../../icons/crocodile.svg";
 
 export default function AboutPage() {
   const fullText = "About Me";

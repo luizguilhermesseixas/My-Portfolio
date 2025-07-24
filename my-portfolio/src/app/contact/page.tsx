@@ -1,12 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 
-import GithubIcon from "@/icons/github.svg";
-import LinkedinIcon from "@/icons/linkedin.svg";
-import MailIcon from "@/icons/mail.svg";
-import MapIcon from "@/icons/map.svg";
-import PhoneIcon from "@/icons/phone.svg";
-import LionIcon from "@/icons/lion.svg";
+import GithubIcon from "../../icons/github.svg";
+import LinkedinIcon from "../../icons/linkedin.svg";
+import MailIcon from "../../icons/mail.svg";
+import MapIcon from "../../icons/map.svg";
+import PhoneIcon from "../../icons/phone.svg";
+import LionIcon from "../../icons/lion.svg";
 
 export default function ContactPage() {
   const fullText = "Contact Me";
