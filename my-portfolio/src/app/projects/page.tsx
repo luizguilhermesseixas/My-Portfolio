@@ -97,8 +97,10 @@ export default function ProjectsPage() {
             <h2 className="text-2xl font-bold text-primary-600">
               {project.title}
             </h2>
-            <p className="text-primary-700">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mt-2">
+            <p className="text-primary-700 h-8 overflow-y-auto w-full">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mt-2 h-8 overflow-y-auto w-full items-start">
               {project.techs.map((tech) => (
                 <span
                   key={tech}
