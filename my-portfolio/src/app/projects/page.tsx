@@ -5,18 +5,52 @@ import Image from "next/image";
 
 const projects = [
   {
-    title: "Project One",
-    description: "Short description of the project.",
-    image: "/images/default.webp", // Ensure this file exists at public/images/default.webp
-    techs: ["React", "Node.js", "TailwindCSS"],
-    link: "https://github.com/seuprojeto1",
+    title: "Contacts-API",
+    description: "A simple REST API for managing contacts.",
+    image: "/images/contactsAPI.webp",
+    techs: [
+      "NestJS",
+      "Typescript",
+      "PostgreSQL",
+      "Redis",
+      "Docker",
+      "Prisma",
+      "Swagger",
+      "JWT",
+    ],
+    link: "https://github.com/luizguilhermesseixas/contacts-API",
   },
   {
-    title: "Project Two",
-    description: "Another project description.",
-    image: "/images/default.webp",
-    techs: ["Go", "PostgreSQL", "Docker"],
-    link: "https://github.com/seuprojeto2",
+    title: "Seller-VUE",
+    description: "Frontend to consume a food delivery API",
+    image: "/images/seller.webp",
+    techs: ["Typescript", "Vue.js", "Docker", "Pinia", "Vite", "CSS"],
+    link: "https://github.com/luizguilhermesseixas/Seller-vue",
+  },
+  {
+    title: "Delivery-API",
+    description:
+      "Application focused on building an API in Ruby on Rails that provides services for a food delivery app.",
+    image: "/images/deliveryAPI.webp",
+    techs: [
+      "Ruby",
+      "Rails",
+      "Docker",
+      "JWT",
+      "SQLite3",
+      "RSpec",
+      "ActiveRecord",
+      "Kaminari",
+    ],
+    link: "https://github.com/luizguilhermesseixas/delivery-api",
+  },
+  {
+    title: "MyPortfolio",
+    description:
+      "Application focused on building a personal portfolio to showcase projects and skills.",
+    image: "/images/portfolio.webp",
+    techs: ["Next.js", "Typescript", "TailwindCSS"],
+    link: "https://github.com/luizguilhermesseixas/my-portfolio",
   },
 ];
 
@@ -63,8 +97,10 @@ export default function ProjectsPage() {
             <h2 className="text-2xl font-bold text-primary-600">
               {project.title}
             </h2>
-            <p className="text-primary-700">{project.description}</p>
-            <div className="flex flex-wrap gap-2 mt-2">
+            <p className="text-primary-700 h-8 overflow-y-auto w-full">
+              {project.description}
+            </p>
+            <div className="flex flex-wrap gap-2 mt-2 h-8 overflow-y-auto w-full items-start">
               {project.techs.map((tech) => (
                 <span
                   key={tech}
