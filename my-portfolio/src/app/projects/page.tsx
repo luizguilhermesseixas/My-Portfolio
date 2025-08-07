@@ -23,7 +23,7 @@ const projects = [
   {
     title: "Seller-VUE",
     description: "Frontend to consume a food delivery API",
-    image: "/images/seller.webp",
+    image: "/images/sellerVue.webp",
     techs: ["Typescript", "Vue.js", "Docker", "Pinia", "Vite", "CSS"],
     link: "https://github.com/luizguilhermesseixas/Seller-vue",
   },
