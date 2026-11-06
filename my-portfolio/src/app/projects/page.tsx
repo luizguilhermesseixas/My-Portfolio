@@ -8,11 +8,11 @@ import ButtonLink from "../../components/ButtonLink";
 const projects = [
   {
     title: "Contacts-API",
-    description: "A simple REST API for managing contacts.",
+    description: "REST API for contact management.",
     image: "/images/contactsAPI.webp",
     techs: [
       "NestJS",
-      "Typescript",
+      "TypeScript",
       "PostgreSQL",
       "Redis",
       "Docker",
@@ -24,15 +24,14 @@ const projects = [
   },
   {
     title: "Seller-VUE",
-    description: "Frontend to consume a food delivery API",
+    description: "Frontend for a food delivery API.",
     image: "/images/sellerVue.webp",
-    techs: ["Typescript", "Vue.js", "Docker", "Pinia", "Vite", "CSS"],
+    techs: ["TypeScript", "Vue.js", "Docker", "Pinia", "Vite", "CSS"],
     link: "https://github.com/luizguilhermesseixas/Seller-vue",
   },
   {
     title: "Delivery-API",
-    description:
-      "Application focused on building an API in Ruby on Rails that provides services for a food delivery app.",
+    description: "Ruby on Rails API for a food delivery application.",
     image: "/images/deliveryAPI.webp",
     techs: [
       "Ruby",
@@ -48,10 +47,9 @@ const projects = [
   },
   {
     title: "MyPortfolio",
-    description:
-      "Application focused on building a personal portfolio to showcase projects and skills.",
+    description: "Personal portfolio showcasing software projects and technical skills.",
     image: "/images/portfolio.webp",
-    techs: ["Next.js", "Typescript", "TailwindCSS"],
+    techs: ["Next.js", "TypeScript", "Tailwind CSS"],
     link: "https://github.com/luizguilhermesseixas/my-portfolio",
   },
 ];
@@ -114,15 +112,15 @@ export default function ProjectsPage() {
               rel="noopener noreferrer"
               className="mt-2 self-start text-accent font-semibold hover:underline"
             >
-              Ver no GitHub
-              <span className="sr-only"> (abre em nova aba)</span>
+              View on GitHub
+              <span className="sr-only"> (opens in a new tab)</span>
               <span aria-hidden="true"> &rarr;</span>
             </a>
           </div>
         </article>
         <div className="flex justify-between items-center mt-8 pt-6 border-t border-line">
           <button onClick={prevProject} className={navButton}>
-            Anterior
+            Previous
           </button>
           <div className="flex items-center gap-3">
             <div className="flex gap-2" aria-hidden="true">
@@ -140,16 +138,16 @@ export default function ProjectsPage() {
             </span>
           </div>
           <button onClick={nextProject} className={navButton}>
-            Próximo
+            Next
           </button>
         </div>
       </div>
       <div className="flex flex-col sm:flex-row gap-4 mt-10">
         <ButtonLink href="/contact" variant="primary" className="flex-1">
-          Contact
+          Get in Touch
         </ButtonLink>
         <ButtonLink href="/Luiz_Seixas_Resume.pdf" download className="flex-1">
-          Download CV
+          Download Resume
         </ButtonLink>
         <ButtonLink href="/about" className="flex-1">
           About

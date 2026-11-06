@@ -82,7 +82,7 @@ export default function ContactPage() {
           View Projects
         </ButtonLink>
         <ButtonLink href="/Luiz_Seixas_Resume.pdf" download className="flex-1">
-          Download CV
+          Download Resume
         </ButtonLink>
         <ButtonLink href="/about" className="flex-1">
           About

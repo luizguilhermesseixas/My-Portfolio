@@ -27,7 +27,7 @@ export default function Header() {
   return (
     <header className="bg-primary-900/95 backdrop-blur shadow-md sticky top-0 z-50">
       <nav
-        aria-label="Main"
+        aria-label="Main navigation"
         className="max-w-6xl mx-auto flex items-center justify-between py-4 px-6"
       >
         <Link

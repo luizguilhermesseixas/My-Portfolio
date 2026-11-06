@@ -11,8 +11,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Luiz seixas Portfolio",
-  description: "My personal portfolio built with Next.js and TypeScript.",
+  title: "Luiz Seixas | Full-Stack Software Engineer",
+  description:
+    "Full-stack software engineer with experience in billing, invoicing, and subscription management systems. Explore projects and technical skills.",
 };
 
 export default function RootLayout({

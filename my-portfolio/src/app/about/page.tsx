@@ -14,7 +14,7 @@ export default function AboutPage() {
     "Next.js",
     "HTML",
     "CSS",
-    "TailwindCSS",
+    "Tailwind CSS",
     "SQL",
     "Docker",
     "RESTful APIs",
@@ -29,7 +29,7 @@ export default function AboutPage() {
   return (
     <section className="max-w-4xl mx-auto px-6 py-12 md:py-16">
       <PageHeading
-        text="About Me"
+        text="About"
         className="mb-8 justify-center md:justify-start"
         icon={
           <CrocodileIcon className="w-14 h-14 md:w-20 md:h-20 shrink-0 transition-transform duration-300 hover:-translate-y-2 hover:rotate-6" />
@@ -37,18 +37,16 @@ export default function AboutPage() {
       />
       <div className="bg-surface border border-line rounded-2xl shadow-sm p-6 sm:p-10">
         <p className="text-lg md:text-xl text-muted leading-relaxed">
-          I am a Full Stack Software Engineer passionate about building robust,
-          scalable, and user-focused web applications. My experience spans the
-          development and optimization of billing, invoicing, and subscription
-          management systems, always prioritizing code quality,
-          maintainability, and system reliability. I thrive in agile,
-          cross-functional teams and committed to best practices in code
-          review, testing, and CI/CD.
+          I am a full-stack software engineer with experience developing and
+          optimizing billing, invoicing, and subscription management systems. I
+          build user-focused web applications with an emphasis on maintainable
+          code, system reliability, and quality. I collaborate with
+          cross-functional teams and contribute to code reviews, automated
+          testing, and CI/CD practices.
         </p>
         <p className="text-lg md:text-xl text-muted leading-relaxed mt-6">
-          Currently, I am deepening my expertise in cloud computing—especially
-          AWS—and continuously embracing new technologies to drive innovation.
-          You can find my main tech stack highlighted below.
+          I am currently expanding my cloud computing skills, with a particular
+          focus on AWS. My core technologies and practices are listed below.
         </p>
         <div className="bg-surface-muted rounded-xl p-5 sm:p-6 mt-8">
           <h2 className="text-2xl font-bold text-heading mb-4">Tech Stack</h2>
@@ -69,10 +67,10 @@ export default function AboutPage() {
           View Projects
         </ButtonLink>
         <ButtonLink href="/Luiz_Seixas_Resume.pdf" download className="flex-1">
-          Download CV
+          Download Resume
         </ButtonLink>
         <ButtonLink href="/contact" className="flex-1">
-          Contact Me
+          Get in Touch
         </ButtonLink>
       </div>
     </section>
