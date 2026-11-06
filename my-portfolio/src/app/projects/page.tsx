@@ -1,7 +1,9 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import CrabIcon from "../../icons/crab.svg"; // Adjust the import path as necessary
+import React, { useState } from "react";
+import CrabIcon from "../../icons/crab.svg";
 import Image from "next/image";
+import PageHeading from "../../components/PageHeading";
+import ButtonLink from "../../components/ButtonLink";
 
 const projects = [
   {
@@ -55,8 +57,6 @@ const projects = [
 ];
 
 export default function ProjectsPage() {
-  const fullText = "My Projects";
-  const [displayed, setDisplayed] = useState("");
   const [current, setCurrent] = useState(0);
 
   const prevProject = () =>
@@ -66,98 +66,94 @@ export default function ProjectsPage() {
 
   const project = projects[current];
 
-  useEffect(() => {
-    if (displayed.length < fullText.length) {
-      const timeout = setTimeout(() => {
-        setDisplayed(fullText.slice(0, displayed.length + 1));
-      }, 100);
-      return () => clearTimeout(timeout);
-    }
-  }, [displayed]);
+  const navButton =
+    "px-5 py-2 rounded-lg bg-chip text-chip-text font-medium hover:bg-accent hover:text-accent-contrast transition-colors";
 
   return (
-    <section className="max-w-5xl mx-auto py-16 px-2 sm:px-4">
-      <div className="w-full max-w-3xl flex justify-center md:justify-start items-center mb-8 mx-auto">
-        <h1 className="text-4xl md:text-6xl font-sans text-primary-500 text-center md:text-left">
-          {displayed}
-        </h1>
-        <CrabIcon className="w-14 h-14 md:w-20 md:h-20 ml-4 transition-transform duration-300 hover:-translate-y-2 hover:rotate-6" />
-      </div>
-      <div className="w-full max-w-3xl bg-primary-50 rounded-xl shadow-lg p-8 flex flex-col items-center mx-auto">
-        <div className="w-full flex flex-col md:flex-row items-center gap-6">
+    <section className="max-w-4xl mx-auto px-6 py-12 md:py-16">
+      <PageHeading
+        text="My Projects"
+        className="mb-8 justify-center md:justify-start"
+        icon={
+          <CrabIcon className="w-14 h-14 md:w-20 md:h-20 shrink-0 transition-transform duration-300 hover:-translate-y-2 hover:rotate-6" />
+        }
+      />
+      <div
+        role="group"
+        aria-roledescription="carousel"
+        aria-label="Projects"
+        className="bg-surface border border-line rounded-2xl shadow-sm p-5 sm:p-8"
+      >
+        <article
+          aria-live="polite"
+          className="flex flex-col md:flex-row gap-6 md:items-start"
+        >
           <Image
             src={project.image}
-            alt={project.title}
+            alt={`${project.title} preview`}
             width={400}
             height={180}
-            className="w-full md:w-1/3 rounded-lg object-cover shadow"
-            style={{ maxHeight: 180 }}
+            className="w-full md:w-2/5 aspect-[16/9] rounded-lg object-cover shadow"
           />
-          <div className="flex-1 flex flex-col gap-2">
-            <h2 className="text-2xl font-bold text-primary-600">
-              {project.title}
-            </h2>
-            <p className="text-primary-700 h-8 overflow-y-auto w-full">
-              {project.description}
-            </p>
-            <div className="flex flex-wrap gap-2 mt-2 h-8 overflow-y-auto w-full items-start">
+          <div className="flex-1 flex flex-col gap-3">
+            <h2 className="text-2xl font-bold text-heading">{project.title}</h2>
+            <p className="text-muted leading-relaxed">{project.description}</p>
+            <ul className="flex flex-wrap gap-2">
               {project.techs.map((tech) => (
-                <span
+                <li
                   key={tech}
-                  className="bg-primary-200 text-primary-700 px-3 py-1 rounded font-medium text-sm transition-transform duration-300 hover:-translate-y-1 hover:scale-110 cursor-pointer"
+                  className="bg-chip text-chip-text px-3 py-1 rounded-full text-sm font-medium"
                 >
                   {tech}
-                </span>
+                </li>
               ))}
-            </div>
+            </ul>
             <a
               href={project.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-block text-primary-700 hover:underline font-semibold"
+              className="mt-2 self-start text-accent font-semibold hover:underline"
             >
               Ver no GitHub
+              <span className="sr-only"> (abre em nova aba)</span>
+              <span aria-hidden="true"> &rarr;</span>
             </a>
           </div>
-        </div>
-        <div className="flex justify-between items-center w-full mt-8">
-          <button
-            onClick={prevProject}
-            className="px-4 py-2 rounded bg-primary-200 text-primary-700 hover:bg-primary-600 hover:text-primary-50 transition-colors"
-          >
+        </article>
+        <div className="flex justify-between items-center mt-8 pt-6 border-t border-line">
+          <button onClick={prevProject} className={navButton}>
             Anterior
           </button>
-          <span className="text-primary-700">
-            {current + 1} / {projects.length}
-          </span>
-          <button
-            onClick={nextProject}
-            className="px-4 py-2 rounded bg-primary-200 text-primary-700 hover:bg-primary-600 hover:text-primary-50 transition-colors"
-          >
+          <div className="flex items-center gap-3">
+            <div className="flex gap-2" aria-hidden="true">
+              {projects.map((p, index) => (
+                <span
+                  key={p.title}
+                  className={`h-2 rounded-full transition-all ${
+                    index === current ? "w-6 bg-accent" : "w-2 bg-chip"
+                  }`}
+                />
+              ))}
+            </div>
+            <span className="text-muted text-sm">
+              {current + 1} / {projects.length}
+            </span>
+          </div>
+          <button onClick={nextProject} className={navButton}>
             Próximo
           </button>
         </div>
       </div>
-      <div className="flex flex-col sm:flex-row justify-center gap-4 w-full max-w-xl mx-auto mt-10">
-        <a
-          href="/Luiz_Seixas_Resume.pdf"
-          download
-          className="flex-1 basis-0 w-full border border-primary-500 text-primary-500 px-8 py-3 rounded font-semibold text-lg hover:bg-primary-500 hover:text-primary-50 transition-colors text-center"
-        >
-          Download CV
-        </a>
-        <a
-          href="/contact"
-          className="flex-1 basis-0 w-full border border-primary-500 text-primary-500 px-8 py-3 rounded font-semibold text-lg hover:bg-primary-500 hover:text-primary-50 transition-colors text-center"
-        >
+      <div className="flex flex-col sm:flex-row gap-4 mt-10">
+        <ButtonLink href="/contact" variant="primary" className="flex-1">
           Contact
-        </a>
-        <a
-          href="/about"
-          className="flex-1 basis-0 w-full border border-primary-500 text-primary-500 px-8 py-3 rounded font-semibold text-lg hover:bg-primary-500 hover:text-primary-50 transition-colors text-center"
-        >
+        </ButtonLink>
+        <ButtonLink href="/Luiz_Seixas_Resume.pdf" download className="flex-1">
+          Download CV
+        </ButtonLink>
+        <ButtonLink href="/about" className="flex-1">
           About
-        </a>
+        </ButtonLink>
       </div>
     </section>
   );
